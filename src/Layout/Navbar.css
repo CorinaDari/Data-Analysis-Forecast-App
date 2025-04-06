@@ -1,0 +1,86 @@
+/* Navbar.css */
+
+.navbar-container {
+  position: relative;
+}
+
+.menu-icon {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #ecf0f1;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 60px;
+  background-color: #2c3e50;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: width 0.3s ease;
+}
+
+.sidebar.open {
+  width: 200px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sidebar ul li {
+  width: 100%;
+  text-align: left;
+  margin: 1rem 0;
+}
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 10px;
+  padding-left: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background-color: #3498db;
+  color: #ffffff;
+}
+
+.icon {
+  font-size: 1.5rem;
+  width: 30px;
+  text-align: center;
+}
+
+.label {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.sidebar.open .label {
+  opacity: 1;
+}
+
+/* Ajustăm contentul */
+.content {
+  padding: 20px; /* Padding pentru conținut */
+  margin-left: 60px; /* Lasă suficient spațiu pentru sidebar */
+  transition: margin-left 0.3s ease;
+}
